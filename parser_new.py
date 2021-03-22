@@ -155,11 +155,6 @@ def split_well_description_str(description_str: str) -> tp.List[str]:
 def format_well_description_str(split_str_description: tp.List[tp.Any]) -> tp.Tuple[tp.Any, ...]:
     """ Преобразуем значения строки описания вскрытия скважины к необходимому формату.
 
-    Примечание: при указании типа split_str_description как List[str] анализатор Mypy выводит ошибку
-    " No overload variant of "__setitem__" of "list" matches argument types "int", "int" ".
-    Данная ошибка, предположительно, связана с инициализацией(а так же переопределением собственного значения) списка
-    и обращением к нему через индекс. Для избежания данной ошибки указан тип List[Any].
-
     :param split_str_description: Список c разделенными данными о вскрытии скважины.
 
     :return: Кортеж c разделенными отформатированными данными о вскрытии скважины.
